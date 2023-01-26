@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app-frontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: react-app-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: react-app-frontend
+    spec:
+      containers:
+        - name: react-app-frontend
+          image: react-app-frontend:v1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_API_KEY
+              value: "http://localhost:30001/api/v1/AppObject"

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app-frontend-service
+spec:
+  selector:
+    app: react-app-frontend
+  type: NodePort
+  ports:
+    - port: 3000
+      nodePort: 30002

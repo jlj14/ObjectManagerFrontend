@@ -1,0 +1,37 @@
+.errorMessage {
+  color: #bf1650;
+}
+
+.errorMessage::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  grid-gap: 6px;
+}
+
+.formContainer label { 
+  text-align: right; 
+  margin-top: 5px;
+}
+
+.formContainer input { 
+  padding: 7px 14px;
+  border-color: rgb(235, 235, 235);
+  border-radius: 10px;
+}
+
+.formContainer span { 
+  margin-left: 50px;
+  text-align: left;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  max-width: 100px;
+  margin-left: 50px !important;
+}
